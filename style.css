@@ -1,0 +1,30 @@
+.centent {
+	text-align: auto;
+	width:900px;
+}
+.container{
+	background-color: #33beff ; 
+	margin-right: 120px;
+	margin-left:  120px;
+	margin-top:  50px;
+	padding: 50px;
+	border-radius: 30px;
+	content-al
+
+
+
+}
+body{
+	background-color: #ccefff;
+}
+
+img{
+	width: 150px;
+	height: 150px;
+}
+#button{
+	margin:20px;
+	padding: 20px;
+	
+
+}
