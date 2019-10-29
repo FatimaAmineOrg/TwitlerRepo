@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <img src="logo.png">
+    <script src="jquery.js"></script>
+    <script src="data_generator.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class='container'>
+      <button id="button">new tweets</button>
+    <div  class="content" id="newtweets"></div>
+    <div class="content"  id="firsttweets"></div>
+   
+    </div>
+  <script type="text/javascript">
+     $("button").on("click",function(event){
+     var $div2 = $('div#newtweets');
+        $div2.html('');
+       
+
+        var index = streams.home.length - 1;
+        while(index >= 0){
+          var tweet = streams.home[index];
+          var $tweet = $('<div></div><br />');
+          $tweet.text('@'+ tweet.user + ' : ' + tweet.message+'created at _____'+tweet.created_at);
+          $tweet.appendTo($div2);
+          index -= 1;
+        }
+
+      });
+    </script>
+    <script>
+      $(document).ready(function(){
+        var $div1 = $('div#firsttweets');
+        $div1.html('');
+       
+
+        var index = streams.home.length - 1;
+        while(index >= 0){
+          var tweet = streams.home[index];
+          var $tweet = $('<div></div><br />');
+          $tweet.text('@'+tweet.user  + ' : ' + tweet.message+'created at _____'+tweet.created_at);
+          $tweet.appendTo($div1);
+          index -= 1;
+        }
+
+      });
+      
+    </script>
+  </body>
+</html>
